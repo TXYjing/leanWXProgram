@@ -1,5 +1,4 @@
 <!--index.wxml-->
-<<<<<<< HEAD
 <!--1. 小程序的数据绑定：{{}}->mustuche语法 -->
 <view>{{name}}</view>
 <!-- 2.列表展示：wx:for="{{参数}}" -->
@@ -7,8 +6,6 @@
 <!-- 3.事件监听 -->
 <view>{{counter}}</view>
 <button size="mini" bindtap="handleCount">+</button>
-=======
 <view class="container">
 <view>知识点1：</view>
 </view>
->>>>>>> df8b8165e057c31386e34cd6fcaa34716b4c857b
