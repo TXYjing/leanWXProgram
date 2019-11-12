@@ -1,0 +1,77 @@
+<!--pages/wxml/wxml.wxml-->
+<!--1.WXML格式  :类似于html-->
+<!-- 2.Mustache语法 -->
+<!-- <view>{{msg}}</view>
+<view>{{a}} {{b}}</view>
+<view>{{a+" "+b}}</view>
+
+<view>{{age>=18?'成年人':'未成年人'}}</view>
+<view>{{today}}</view>
+
+<button size="mini" bindtap="changeColor">改变字体颜色</button>
+<view class='my_font {{change?"change":""}}'>快看，我是什么颜色</view>
+
+<map class="map" longitude="116.11" latitude="39.8"></map> -->
+
+<!-- <view>—————条件判断——————</view> -->
+<!-- wx:if的使用 -->
+<!-- <button size="mini" bindtap="handleShow">是否显示</button>
+<view wx:if="{{isShow}}">看的见我吗</view> -->
+<!-- wx:elif的使用 -->
+<!-- <view wx:if="{{score>=90}}">优秀</view>
+<view wx:else>良好</view>
+<view wx:if="{{score>=90}}">优秀</view>
+<view wx:elif="{{score>=80}}">良好</view>
+<view wx:else>加油</view> -->
+
+<!-- hidden 属性和wx:if的区别-->
+<!-- hidden:通过控制该组件的display属性控制其隐藏显示 -->
+<!-- wx:if：通过移除或者添加该元素来控制显示隐藏 -->
+<!-- <view hidden="{{false}}">hidden属性</view>
+<view wx:if="{{true}}">wx:if隐藏</view> -->
+
+<!-- 列表渲染：wx:for -->
+<!-- <view>—————列表渲染——————</view> -->
+<!-- <view wx:for="{{obj}}" wx:key="{{key}}">{{item}}------{{index}}</view>
+<view wx:for="{{['数组元素1','数组元素2']}}">{{item}}------{{index}}</view>
+<view wx:for="{{'哼哼哈嘿'}}">{{item}}------{{index}}</view> -->
+
+
+<!-- block标签 ：用来包括一组元素  通过属性判断如：wx:if   wx:for    非组件不渲染可提高性能-->
+
+<!-- 3.item、index起别名：容易区分 -->
+<!-- 4.wx:key属性的作用：提高性能 -->
+<!-- <view>—————wx:key这是一条分割线——————</view> -->
+<!-- <view wx:for="{{movies}}" wx:key="{{index}}">{{item}}</view>
+<view wx:for="{{movies}}" wx:for-item="movie" wx:for-index="i"  wx:key="{{index}}">{{movie}}---{{i}}</view>
+
+<block wx:for="{{arr}}" wx:for-item="arrItem">
+  <block wx:for="{{arrItem}}" wx:key="{{index}}">
+  <view wx:key="{{index}}">{{item}}</view>
+  </block>
+</block> -->
+<!-- <view>———————temlplate——————</view> -->
+<!-- 模板中包裹的内容，在没有使用之前，是不会进行渲染的 -->
+<!-- 使用原模版中定义name属性，使用时使用is属性 -->
+<!-- <template name="temp1">
+  <button>{{buttonTxt}}</button>
+    <view>{{content}}</view>
+</template>
+
+<template is="temp1" data="{{buttonTxt: '我是按钮呀',content: '我是小程序呀'}}" />
+<template is="temp1" data="{{buttonTxt: '按钮',content: '小程序'}}" /> -->
+
+<!-- wxml的导入方式
+    import导入：
+    1.主要是导入template
+    2.特点：不可进行循环导入
+    include引入：
+    1.将公共的wxml中的组件抽取到一个文件中
+    2.特点：不能导入template/wxs,可以进行递归导入
+ -->
+<include src="../../WXML/header.wxml"/>
+啦啦啦啦啦，我是一条可爱的分割线
+<include src="../../WXML/footer.wxml"/>
+
+
+

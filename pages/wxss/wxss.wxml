@@ -1,0 +1,16 @@
+<!--pages/wxss/wxss.wxml-->
+<!-- 1.设置样式的三种方式 -->
+<!-- 1.1：行内样式 -->
+<view style="color:red;font-size:30rpx">哈哈哈</view>
+<!-- 1.2：页面样式 -->
+<view class="box">哈哈哈</view>
+<!-- 1.3全局样式 在app.wxss中设置样式-->
+<view class="container">哼哼哼</view>
+<!-- 2.三种样式作用于同一个组件时的优先级：行内>页内>全局 -->
+
+<!-- 3.wxss中的单位：rpx -->
+<!-- 前端常用的尺寸适配：em/rem/vm/wh -->
+<view class="box1"></view>
+<view class="box2"></view>
+
+<!-- 4.使用官方样式库开发搜索框：引入对应css.js.html -->

@@ -1,0 +1,11 @@
+// < wxs module = "info" >
+  //js代码
+  var msg = "哈喽，我是wxs"
+var sum = function(num1, num2) {
+  return num1 + num2
+}
+//commonjs模块化导出的写法
+module.exports = {
+    msg: msg,
+    sum: sum
+  } 

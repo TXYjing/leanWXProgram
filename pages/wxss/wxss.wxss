@@ -1,0 +1,17 @@
+/* pages/wxss/wxss.wxss */
+/* .box{
+  font-size: 40rpx;
+  color: green
+}
+.box1{
+  width: 100px;
+  height: 100px;
+  background-color: #674532
+}
+.box2{
+  width: 100rpx;
+  height: 100rpx;
+  background-color: #e77d3f;
+  margin-top: 10px
+} */
+@import './box.wxss'

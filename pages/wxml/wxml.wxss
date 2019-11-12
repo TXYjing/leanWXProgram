@@ -1,0 +1,12 @@
+/* pages/wxml/wxml.wxss */
+.my_font{
+  color: rgb(122, 177, 40)
+}
+.change{
+  color: rgb(52, 104, 247)
+}
+
+.map{
+  width: 300px;
+  height: 100px
+}
