@@ -1,13 +1,39 @@
 <!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
+<view >
+<!-- text组件，行内组件 -->
+<text>行内1</text>
+<text>行内2\n</text>
+<!-- 2.默认text中的文本常用不可选中  selectable:文本长按是否可复制-->
+<text selectable="{{true}}">文本可复制\n</text>
+<!-- 3.space:决定空格的大小 -->
+<!-- ensp:半个中文字符大小 -->
+<!-- emsp：一个中文字符大小 -->
+<text>Htllo Word\n</text>
+<text space="nbsp">Htllo Word\n</text>
+<text space="ensp">Htllo Word\n</text>
+<text space="emsp">Htllo Word\n</text>
+<!-- 4.decode：是否解码文本 -->
+<text>5 &gt; 3/n</text>
+<text decode="{{true}}">5 &gt; 3/n</text>
+
+
+
+<!-- button组件 -->
+<button>按钮</button>
+<!-- size：按钮大小 -->
+<button size="mini" >按钮</button>
+<button size="mini"  type="primary">按钮</button>
+<button size="mini"  type="warn">按钮</button>
+<button size="mini"  type="default">按钮</button>
+<!-- plain:镂空效果 -->
+<button size="mini" plain="{{true}}" >镂空按钮</button>
+<!-- disable:不可用 -->
+<button size="mini" disabled="{{true}}">不可用按钮</button>
+<!-- loading:加载 -->
+<button size="mini" loading="{{true}}">loading按钮</button>
+<button size="mini" loading="{{false}}">loading按钮</button>
+<!-- hover-class -->
+<button hover-class="preced">按钮</button>
+<!-- open-type -->
+
 </view>

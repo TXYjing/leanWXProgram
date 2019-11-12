@@ -1,0 +1,27 @@
+<!--pages/image/image.wxml-->
+<!-- <text>pages/image/image.wxml</text> -->
+<view>
+  <!-- 1.image的基本使用 -->
+  <!-- 
+    重点：
+    1.image组件可写成单标签，也可写成双标签
+    2.image默认由自己大小
+    3.行内块级元素：inline-block
+ -->
+  <!-- <image/> -->
+  <!-- 2.src:图片资源地址  可以写绝对路径或相对路径 -->
+  <image src="https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1573464970&di=0fb49eec9e28a281a4d1a5f4196d4366&src=http://hbimg.b0.upaiyun.com/057c50ab3dc879fe71f73661d8b7bff8b8034b1f28907-LWqMS5_fw658"></image>
+  <!-- 2.补充：显示相册中的图片 -->
+  <button bindtap="handleChooseAlbum">选择图片</button>
+  <image src="{{imgSrc}}"></image>
+
+  <!--3.bindload ：监听图片加载完成  -->
+  <!-- lazy-load：懒加载 -->
+  <view>-----------------------------------------------</view>
+  <image wx:for="{{10}}" src="https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1573464970&di=0fb49eec9e28a281a4d1a5f4196d4366&src=http://hbimg.b0.upaiyun.com/057c50ab3dc879fe71f73661d8b7bff8b8034b1f28907-LWqMS5_fw658"
+    bindload="handleImageLoad" lazy-load="{{true}}"></image>
+  <!-- 4.show-menu-by-longpress：长按图片识别小程序 -->
+  <view>===========================</view>
+  <image src="https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1573464970&di=0fb49eec9e28a281a4d1a5f4196d4366&src=http://hbimg.b0.upaiyun.com/057c50ab3dc879fe71f73661d8b7bff8b8034b1f28907-LWqMS5_fw658" show-menu-by-longpress="{{true}}"></image>
+
+</view>

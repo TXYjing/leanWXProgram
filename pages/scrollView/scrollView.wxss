@@ -1,0 +1,25 @@
+/* pages/scrollView/scrollView.wxss */
+.container{
+  background-color: #9160f5;
+  white-space: nowrap
+}
+.item{
+  width: 100rpx;
+  height: 100rpx;
+  background-color: #cc800f;
+  margin: 10px;
+  display: inline-block
+}
+.container1{
+  background-color: #e1f341;
+  white-space: nowrap;
+  margin-top: 10rpx;
+  height: 200rpx;
+}
+.item1{
+  /* width: 100rpx; */
+  height: 100rpx;
+  background-color: #cc800f;
+  margin: 10px;
+  /* display: inline-block */
+}

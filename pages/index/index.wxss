@@ -19,3 +19,8 @@
 .usermotto {
   margin-top: 200px;
 }
+
+.preced{
+  background-color: red;
+  color: white
+}

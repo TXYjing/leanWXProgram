@@ -1,0 +1,22 @@
+/* pages/view/view.wxss */
+.box1{
+  background-color: rebeccapurple;
+  color: white;
+  width: 200rpx;
+  height: 200rpx
+}
+.box1-hover{
+  background-color: orange
+}
+
+.box2{
+width: 300rpx;
+height: 300rpx;
+background-color: gold;
+margin-top: 20px;
+/* text-align: center */
+/* vertical-align: center */
+}
+.box2-hover{
+  background-color: greenyellow
+}

@@ -1,0 +1,16 @@
+<!--pages/input/input.wxml-->
+
+<view>
+<!-- 1.input的基本使用,input默认无边框 -->
+<input></input>
+<!-- 2.input中的默认值 -->
+<input value="我是默认值噢"></input>
+<!-- 3.type:决定键盘类型（英文字母+其他符号/数字/身份证）在真机测试中有效 -->
+<input type="number"/>
+<!-- 4.password：暗文 -->
+<input password="{{true}}"></input>
+<!-- 5.placeholder：占位符 -->
+<input placeholder="你看得见我吗"></input>
+<!-- 6.input绑定事件 -->
+<input bindinput="handleInput" bindfocus="handleFocust" bindblur="handleBlur"></input>
+</view>
