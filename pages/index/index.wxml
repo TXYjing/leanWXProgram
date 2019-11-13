@@ -1,13 +1,28 @@
 <!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+
+<!-- 1.事件处理回顾 -->
+
+<button bindtap="handleconsole" size="mini">打印</button>
+<button bind:tap="handleconsole" size="mini">打印</button>
+<button bind:catch="handleconsole" size="mini">打印</button>
+<!-- 2.常见事件 -->
+<view class="box" bindtouchstart="handletouchstart" bindtouchmove="handletouchmove" bindtouchcancel="handletouchcancel" bindtouchend="handletouchend" bindtap="handletap" bindlongtap="handlelongtap"></view>
+
+<!-- 3.事件对象的分析 -->
+<!-- target：点击的事件       currenttarget：触发的事件 -->
+<view class="outer" id="outer" bindtap="handleOuter">
+  <view class="inner" id="inner" bindtap="handleInner"></view>
+</view>
+<!-- 4.事件传递参数：data-*属性传递参数，然后再event中取值 -->
+<view class="cotainer">
+  <block wx:for="{{arr0}}" wx:key="{{index}}">
+    <view bindtap="handleTap0" class="item" data-index="{{index}}" data-item="{{item}}">{{item}}</view>
+  </block>
+</view>
+<!-- 5.事件冒泡和事件捕获 -->
+<!-- bind：一层层传递 ； catch：阻止事件的进一步传递-->
+<view class="view1" capture-bind:tap="handlecaptureview1" bindtap="handleview1">
+  <view class="view2" capture-bind:tap="handlecaptureview2" catchtap="handleview2">
+  <view class="view3" capture-bind:tap="handlecaptureview3" bindtap="handleview3"> </view>
   </view>
 </view>
