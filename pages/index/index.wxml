@@ -1,13 +1,14 @@
 <!--index.wxml-->
 <view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
+
 </view>
+<!--1. Toast弹窗 -->
+<button size="mini" bindtap="handleshow">展示Toast</button>
+<!-- 2.Modal -->
+<button size="mini" bindtap="handleshowmodal">展示Modal</button>
+<!-- 3.loding -->
+<button size="mini" bindtap="handleshowload">展示Loading</button>
+<!-- 3.actionsheet -->
+<button size="mini" bindtap="handleshowsheet">展示actionsheet</button>
+<!-- 4.分享按钮 -->
+<button size="mini" open-type="share">分享</button>
