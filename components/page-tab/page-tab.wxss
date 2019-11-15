@@ -1,0 +1,15 @@
+/* components/page-tab/page-tab.wxss */
+.contain{
+  display: flex;
+  height: 44px;
+  line-height: 44px
+}
+.item{
+  flex: 1;
+  text-align: center;
+  background-color: orange
+}
+.active{
+  color:#fff;
+  border-bottom: 10rpx solid rgb(104, 228, 46)
+}

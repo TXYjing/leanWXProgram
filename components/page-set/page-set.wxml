@@ -1,0 +1,2 @@
+<!--components/page-set/page-set.wxml-->
+<view>当前计数：{{counter}}</view>

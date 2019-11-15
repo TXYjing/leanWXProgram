@@ -1,0 +1,4 @@
+<!--components/page-slot/page-slot.wxml-->
+<view class="head">slot header</view>
+<slot></slot>
+<view class="foot">slot footer</view>

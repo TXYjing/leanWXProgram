@@ -1,3 +1,12 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "page-head":"/components/page-head/page-head",
+    "self-style":"/components/self-style/self-style",
+    "page-prop":"/components/page-prop/page-prop",
+    "page-event":"/components/page-event/page-event",
+    "page-tab":"/components/page-tab/page-tab",
+    "page-set":"/components/page-set/page-set",
+    "page-slot":"/components/page-slot/page-slot",
+    "page-slots":"/components/page-slots/page-slots"
+  }
 }

@@ -1,0 +1,4 @@
+<!--components/page-head/page-head.wxml-->
+<view class="head">
+页面头部
+</view>

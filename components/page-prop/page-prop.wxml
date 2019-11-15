@@ -1,0 +1,3 @@
+<!--components/page-prop/page-prop.wxml-->
+<view class='titleClass'>{{title}}</view>
+<view class="contentClass">{{content}}</view>

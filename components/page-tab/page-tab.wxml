@@ -1,0 +1,11 @@
+<!--components/page-tab/page-tab.wxml-->
+
+<view class="contain">
+  <block wx:for="{{titles}}" wx:key="{{index}}">
+    <view 
+    class='item {{currentIndex==index?"active":""}}' 
+    bindtap="handlechange" 
+    data-index="{{index}}" 
+    data-title="{{item}}">{{item}}</view>
+  </block>
+</view>

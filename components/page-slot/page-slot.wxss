@@ -1,0 +1,17 @@
+/* components/page-slot/page-slot.wxss */
+
+.head {
+  height: 100rpx;
+  width: 100%;
+  background-color: #e5f8a0;
+  text-align: center;
+  line-height: 100rpx
+}
+
+.foot {
+  height: 50rpx;
+  width: 100%;
+  background-color: #e5f8a0;
+  text-align: center;
+  line-height: 50rpx
+}

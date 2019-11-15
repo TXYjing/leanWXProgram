@@ -1,13 +1,46 @@
 <!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
+<!--1. 自定义组件的基本使用 -->
+<!-- <page-head/> -->
+
+<!-- 2.自定义组件的样式细节：页面与自定义组件中的class样式具有隔离作用互不影响，自定义组件中不可使用id选择器 -->
+<!-- <view class="title-line">本页面样式</view>
+<self-style/> -->
+
+
+<!-- 3.给自定义组件传递数据/样式-->
+<page-prop title="大标题" titleClass="titleClass" content="大内容" />
+<page-prop title="小标题" content="小内容" contentClass="contentClass" />
+<!-- <page-prop/> -->
+
+<!-- 4.自定义组件与页面的事件传递 -->
+<view>当前计数：{{counter}}</view>
+<page-event bind:event="handleCounter" />
+
+<!--5. tab示例 -->
+<page-tab titles="{{['上新','优惠','精品']}}" bind:gettitle="handleTitle" />
+
+
+<!--6.直接选中组件修改数据/调用方法  -->
+<button bindtap="handlePageCount">页面直接修改组件数据</button>
+<page-set class="sel" />
+
+<!-- 7.插槽 -->
+<!-- 7.1单插槽 -->
+<page-slot>
+  <view>
+    <text>Drear diary:</text>
+    <picker>this is the first time i did this for.</picker>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+</page-slot>
+<!-- 多插槽注意：
+1.给每个插槽起一个名字
+2.必须在component对象中添加一个选项：options -> mutipleSlots:true
+ -->
+<!-- 7.2多插槽 -->
+<page-slots>
+  <view slot="content">
+    <text>Drear diary:</text>
+    <picker>this is the first time i did this for.</picker>
   </view>
-</view>
+   <view slot="bottom">this is the end</view>
+</page-slots>

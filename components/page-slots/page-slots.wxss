@@ -1,0 +1,18 @@
+/* components/page-slots/page-slots.wxss */
+.head {
+  height: 100rpx;
+  width: 100%;
+  background-color:  #d3991b;
+  text-align: center;
+  line-height: 100rpx;
+  color: white
+}
+
+.foot {
+  height: 50rpx;
+  width: 100%;
+  background-color: #d3991b;
+  text-align: center;
+  line-height: 50rpx;
+  color: white
+}

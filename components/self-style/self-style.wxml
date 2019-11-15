@@ -1,0 +1,2 @@
+<!--components/self-style/self-style.wxml-->
+<view class="title-line">自定义样式</view>

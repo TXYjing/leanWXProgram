@@ -1,0 +1,6 @@
+/* components/self-style/self-style.wxss */
+.title-line{
+  font-size: 30rpx;
+  color: green;
+  /* margin-top: 100rpx */
+}
