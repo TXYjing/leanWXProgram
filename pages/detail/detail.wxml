@@ -1,0 +1,6 @@
+<!--pages/detail/detail.wxml-->
+<text>详情页</text>
+<!-- 3. 自定义返回navgateback-->
+<navigator open-type="navigateBack">返回</navigator>
+<!-- 多级跳转 -->
+<navigator url="/pages/comment/comment">跳转至评论页</navigator>

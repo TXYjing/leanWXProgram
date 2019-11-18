@@ -1,0 +1,4 @@
+<!--pages/comment/comment.wxml-->
+<text>评论页</text>
+<!-- 多层级返回  delta：返回几个层级-->
+<navigator open-type="navigateBack" delta="2">返回首页</navigator>

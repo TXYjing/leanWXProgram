@@ -1,13 +1,21 @@
 <!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
-</view>
+<!-- <text>navbar</text> -->
+<!-- 1.navigator跳转 -->
+<navigator url="/pages/detail/detail">跳转至详情页</navigator>
+
+<!-- 2.navigator的open-type属性 -->
+<!-- redirect关闭当前页，跳转至某个页面，但不能跳转至tab页 -->
+<navigator open-type="redirect" url="/pages/logs/logs">跳转至日志页(redirect)</navigator>
+<navigator open-type="redirect" url="/pages/detail/detail">跳转至详情页(redirect)</navigator>
+<!-- switchtab跳转至tab页 ，关闭其他所有非tab页-->
+<navigator open-type="switchTab" url="/pages/logs/logs">跳转至日志页(switchTab)</navigator>
+<!-- relauch关闭所有页面，打开某个页面 -->
+<navigator open-type="reLaunch" url="/pages/detail/detail">跳转至详情页(relauch)</navigator>
+
+
+<!-- 3.跳转数据传输 数据取自onload函数的options中-->
+<navigator url="/pages/detail/detail?name='唐小七'&&age='27'">传递参数给详情页</navigator>
+
+<view>{{name}}</view>
+
+<!-- 4.通过代码跳转：navgateTo()等 -->
